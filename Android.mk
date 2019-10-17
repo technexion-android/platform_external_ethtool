@@ -15,9 +15,10 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE_TAGS := eng
-#LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../bionic/libc/include/
-#LOCAL_CFLAGS += -D_GNU_SOURCE -DNO_GETLINE -DNO_RPMATCH
+
+LOCAL_MODULE := ethtool
+LOCAL_MODULE_TAGS := optional
+
 LOCAL_SRC_FILES := \
       et131x.c \
       marvell.c \
@@ -45,5 +46,5 @@ LOCAL_SRC_FILES := \
       tg3.c \
       stmmac.c \
       rxclass.c
-LOCAL_MODULE := ethtool
+
 include $(BUILD_EXECUTABLE)
