@@ -18,7 +18,12 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := ethtool
 LOCAL_MODULE_TAGS := optional
-
+LOCAL_CFLAGS += "-Wno-unused-parameter" \
+                "-Wno-sign-compare" \
+                "-Wno-missing-field-initializers" \
+                "-Wno-sign-compare" \
+                "-Wno-unused-const-variable" \
+                "-Wno-pointer-arith"
 LOCAL_SRC_FILES := \
       et131x.c \
       marvell.c \
